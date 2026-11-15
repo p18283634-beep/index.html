@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Crazy Dab: spedizione in 48H in tutta Italia e tutta Europa inclusa. Prezzi più bassi d'Italia!"
+      content="Crazy Dab: prodotti senza principio attivo, prezzi convenienti e spedizione inclusa in Italia e in Europa. Contattaci su Telegram."
     />
     <meta name="theme-color" content="#0b1020" />
-    <title>Crazy Dab | Prezzi più bassi d'Italia</title>
+    <title>Crazy Dab | Scopri la selezione</title>
     <style>
       :root {
         --bg: #0b1020;
@@ -38,7 +38,7 @@
         position: sticky;
         top: 0;
         z-index: 10;
-        background: rgba(11, 16, 32, 0.82);
+        background: rgba(11, 16, 32, 0.86);
         border-bottom: 1px solid var(--line);
         backdrop-filter: blur(10px);
       }
@@ -122,7 +122,7 @@
       }
       .button.secondary { border: 1px solid var(--line); background: rgba(255, 255, 255, 0.03); }
       .stats { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
-      .stat, .visual-card, .feature, .cta-panel {
+      .stat, .visual-card, .feature, .product-card, .cta-panel {
         border: 1px solid var(--line);
         background: rgba(255, 255, 255, 0.03);
       }
@@ -152,8 +152,8 @@
       .section-heading { margin: 0 0 26px; text-align: center; }
       .section-heading h2 { margin: 0 0 10px; font-size: clamp(2rem, 3vw, 3rem); }
       .section-heading p { margin: 0; color: var(--muted); }
-      .features { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; }
-      .feature { padding: 26px 22px; border-radius: 20px; }
+      .features, .products { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; }
+      .feature, .product-card { padding: 26px 22px; border-radius: 20px; }
       .feature-icon {
         width: 52px;
         height: 52px;
@@ -164,8 +164,29 @@
         background: linear-gradient(135deg, rgba(124, 58, 237, 0.18), rgba(34, 197, 94, 0.12));
         font-size: 1.5rem;
       }
-      .feature h3 { margin: 0 0 10px; font-size: 1.25rem; }
-      .feature p { margin: 0; color: var(--muted); }
+      .feature h3, .product-card h3 { margin: 0 0 10px; font-size: 1.25rem; }
+      .feature p, .product-card p { margin: 0; color: var(--muted); }
+      .product-card { display: flex; flex-direction: column; min-height: 100%; }
+      .product-art {
+        min-height: 150px;
+        display: grid;
+        place-items: center;
+        margin-bottom: 20px;
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        background: linear-gradient(135deg, rgba(124, 58, 237, 0.18), rgba(34, 197, 94, 0.1));
+        font-size: 3rem;
+      }
+      .product-label {
+        display: inline-block;
+        margin-bottom: 10px;
+        color: #c4b5fd;
+        font-size: 0.78rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+      .product-card .button { margin-top: 20px; align-self: flex-start; }
       .cta-panel {
         padding: 38px 24px;
         border-radius: 26px;
@@ -176,8 +197,10 @@
       .cta-panel p { max-width: 650px; margin: 0 auto 24px; color: var(--muted); }
       .site-footer { padding: 28px 0 40px; border-top: 1px solid var(--line); color: var(--muted); text-align: center; }
       .site-footer p { margin: 6px 0; }
+      .site-footer a { color: #c4b5fd; text-decoration: underline; text-underline-offset: 3px; }
+      .note { margin-top: 18px !important; font-size: 0.85rem; }
       @media (max-width: 820px) {
-        .hero-grid, .features { grid-template-columns: 1fr; }
+        .hero-grid, .features, .products { grid-template-columns: 1fr; }
         .nav-links { display: none; }
         .hero { padding-top: 60px; }
       }
@@ -196,10 +219,10 @@
         </a>
         <nav class="nav-links" aria-label="Menu principale">
           <a href="#vantaggi">Vantaggi</a>
+          <a href="#prodotti">Prodotti</a>
           <a href="#spedizioni">Spedizioni</a>
-          <a href="#contatti">Contatti</a>
         </nav>
-        <a class="nav-cta" href="#spedizioni">Scopri di più</a>
+        <a class="nav-cta" href="https://t.me/crazyd5b" target="_blank" rel="noopener noreferrer">Contattaci su Telegram</a>
       </div>
     </header>
 
@@ -210,12 +233,12 @@
             <span class="eyebrow">Crazy Dab · Spedizioni in 48H</span>
             <h1>Prezzi <span class="highlight">più bassi d'Italia!</span></h1>
             <p>
-              Spedizione in 48H in tutta Italia e tutta Europa inclusa! Scopri Crazy Dab:
-              convenienza e consegna rapida, con la spedizione inclusa in tutta Europa.
+              Spedizione in 48H in tutta Italia e tutta Europa inclusa! Scopri la selezione
+              Crazy Dab: prodotti senza principio attivo, convenienza e consegna rapida.
             </p>
             <div class="hero-actions">
-              <a class="button primary" href="#vantaggi">Scopri i vantaggi</a>
-              <a class="button secondary" href="#spedizioni">Informazioni spedizione</a>
+              <a class="button primary" href="#prodotti">Scopri i prodotti</a>
+              <a class="button secondary" href="https://t.me/crazyd5b" target="_blank" rel="noopener noreferrer">Scrivici su Telegram</a>
             </div>
             <div class="stats" aria-label="Vantaggi Crazy Dab">
               <div class="stat"><strong>48H</strong><span>spedizione rapida</span></div>
@@ -223,7 +246,7 @@
               <div class="stat"><strong>Europa</strong><span>spedizione inclusa</span></div>
             </div>
           </div>
-          <div class="visual-card" aria-label="Spedizioni Crazy Dab">
+          <div class="visual-card" aria-label="Informazioni sulle spedizioni Crazy Dab">
             <div class="shipping-icon" aria-hidden="true">📦</div>
             <h2>Da Crazy Dab a casa tua</h2>
             <p>Spedizione in 48H in tutta Italia e tutta Europa inclusa!</p>
@@ -241,19 +264,52 @@
             <article class="feature">
               <div class="feature-icon" aria-hidden="true">💸</div>
               <h3>Prezzi convenienti</h3>
-              <p>Prezzi più bassi d'Italia: scegli Crazy Dab e approfitta della convenienza.</p>
+              <p>Prezzi più bassi d'Italia: contattaci per conoscere la disponibilità e i dettagli.</p>
             </article>
             <article class="feature">
               <div class="feature-icon" aria-hidden="true">🚚</div>
               <h3>Spedizione in 48H</h3>
-              <p>Ricevi il tuo ordine rapidamente, con spedizione in 48H.</p>
+              <p>Spedizione rapida in 48H, secondo disponibilità e condizioni dell'ordine.</p>
             </article>
             <article class="feature">
               <div class="feature-icon" aria-hidden="true">🌍</div>
               <h3>Italia ed Europa</h3>
-              <p>La spedizione è inclusa in tutta Italia e in tutta Europa.</p>
+              <p>Spedizione inclusa in tutta Italia e in tutta Europa, come indicato da Crazy Dab.</p>
             </article>
           </div>
+        </div>
+      </section>
+
+      <section id="prodotti">
+        <div class="container">
+          <div class="section-heading">
+            <h2>La selezione Crazy Dab</h2>
+            <p>Scopri la disponibilità e chiedi informazioni direttamente al nostro team.</p>
+          </div>
+          <div class="products">
+            <article class="product-card">
+              <div class="product-art" aria-hidden="true">✨</div>
+              <span class="product-label">In evidenza</span>
+              <h3>Novità Crazy Dab</h3>
+              <p>Contattaci per conoscere i prodotti disponibili, le caratteristiche e i prezzi aggiornati.</p>
+              <a class="button secondary" href="https://t.me/crazyd5b" target="_blank" rel="noopener noreferrer">Chiedi informazioni</a>
+            </article>
+            <article class="product-card">
+              <div class="product-art" aria-hidden="true">⭐</div>
+              <span class="product-label">Selezione</span>
+              <h3>I più richiesti</h3>
+              <p>Scrivici per ricevere dettagli sulla selezione e verificare la disponibilità.</p>
+              <a class="button secondary" href="https://t.me/crazyd5b" target="_blank" rel="noopener noreferrer">Scopri la selezione</a>
+            </article>
+            <article class="product-card">
+              <div class="product-art" aria-hidden="true">📦</div>
+              <span class="product-label">Ordini</span>
+              <h3>Ordina su Telegram</h3>
+              <p>Per informazioni su ordini e spedizioni, contattaci direttamente su Telegram.</p>
+              <a class="button primary" href="https://t.me/crazyd5b" target="_blank" rel="noopener noreferrer">Ordina ora</a>
+            </article>
+          </div>
+          <p class="section-heading note">Le immagini, i nomi e i prezzi dei prodotti non sono stati forniti: chiedi la disponibilità direttamente su Telegram.</p>
         </div>
       </section>
 
@@ -262,18 +318,19 @@
           <div class="cta-panel">
             <h2>Convenienza e spedizione inclusa</h2>
             <p>
-              Con Crazy Dab hai prezzi più bassi d'Italia e spedizione in 48H in tutta Italia
-              e tutta Europa inclusa!
+              Con Crazy Dab trovi prezzi convenienti e spedizione in 48H in tutta Italia
+              e tutta Europa inclusa. Per dettagli e condizioni, contattaci direttamente.
             </p>
-            <a class="button primary" href="#contatti">Contattaci</a>
+            <a class="button primary" href="https://t.me/crazyd5b" target="_blank" rel="noopener noreferrer">Contatta @crazyd5b</a>
           </div>
         </div>
       </section>
     </main>
 
-    <footer id="contatti" class="site-footer">
+    <footer class="site-footer">
       <div class="container">
         <p>© 2026 Crazy Dab — Tutti i diritti riservati</p>
+        <p>Contatto diretto: <a href="https://t.me/crazyd5b" target="_blank" rel="noopener noreferrer">Telegram @crazyd5b</a></p>
       </div>
     </footer>
   </body>
