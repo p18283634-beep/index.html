@@ -44,8 +44,24 @@
         backdrop-filter: blur(18px);
       }
       .nav { min-height: 82px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
-      .brand { display: inline-flex; align-items: center; gap: 12px; font-size: 0.9rem; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase; }
-      .brand-mark { width: 10px; height: 10px; border-radius: 50%; background: var(--yellow); box-shadow: 0 0 18px rgba(255, 230, 0, 0.65); }
+      .brand {
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        font-size: 0.9rem;
+        font-weight: 800;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+      }
+      .brand-logo {
+        width: 42px;
+        height: 42px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 2px solid rgba(82, 199, 255, 0.8);
+        box-shadow: 0 0 18px rgba(82, 199, 255, 0.3), 0 0 18px rgba(255, 230, 0, 0.18);
+        background: rgba(9, 24, 43, 0.8);
+      }
       .nav-links { display: flex; align-items: center; gap: 30px; color: var(--muted); font-size: 0.9rem; }
       .nav-links a { transition: color 0.2s ease; }
       .nav-links a:hover { color: var(--yellow); }
@@ -145,7 +161,10 @@
   <body>
     <header class="site-header">
       <div class="container nav">
-        <a href="#top" class="brand" aria-label="Crazy Dab, torna all'inizio"><span class="brand-mark" aria-hidden="true"></span><span>Crazy Dab</span></a>
+        <a href="#top" class="brand" aria-label="Crazy Dab, torna all'inizio">
+          <img class="brand-logo" src="assets/crazy-dab-logo.png" alt="Crazy Dab logo" />
+          <span>Crazy Dab</span>
+        </a>
         <nav class="nav-links" aria-label="Menu principale"><a href="#vantaggi">Vantaggi</a><a href="#catalogo">Catalogo</a><a href="#spedizioni">Spedizioni</a></nav>
         <a class="nav-cta" href="https://t.me/crazyd5b" target="_blank" rel="noopener noreferrer">Contattaci</a>
       </div>
